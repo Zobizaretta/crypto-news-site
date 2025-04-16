@@ -27,12 +27,13 @@ function fetchNews() {
                 title.textContent = article.title;
 
                 const subtitle = document.createElement("h6");
-                subtitle.className = "card-subtitle mb-2 text-muted";
-                subtitle.textContent = `${article.author} - ${article.date}`;
+                subtitle.className = "card-subtitle mb-2 custom-meta";
+                subtitle.innerHTML = "<strong>Time:</strong> " + article.date;
 
                 const content = document.createElement("p");
                 content.className = "card-text";
-                content.textContent = article.content;
+                content.innerHTML = "<strong>Source:</strong> " + article.content;
+                
 
                 const sentiment = document.createElement("p");
                 sentiment.className = "card-text";

@@ -105,6 +105,14 @@ h1, h2, h3 {
     color: #ffeb3b; /* Başlıkları belirginleştir */
 }
 
+.card-subtitle mb-2 custom-meta {
+    color: #d3d3d3 !important;  
+    font-style: italic;
+    font-size: 0.9rem;
+    opacity: 1;  /* Bu satırın yerini gözden geçirin */
+}
+
+
 .card-subtitle,
 .card-text {
     color: #e0e0e0; /* Alt metinleri biraz daha açık yap */

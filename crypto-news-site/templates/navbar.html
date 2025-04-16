@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
     <div class="container">
-        <a class="navbar-brand text-warning fw-bold" href="/">CryptoPulse</a>
+        <a class="navbar-brand" href="/">
+            <img src="{{ url_for('static', filename='images/zobinews-logo.png') }}" alt="ZobiNews" height="40"> </a>
+        
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
@@ -18,8 +20,7 @@
     </div>
 </nav>
 <div class="ticker-wrapper">
-    <div class="ticker">
-        <span id="ticker-text">Yükleniyor...</span>
-    </div>
+    <div id="ticker-text" class="ticker">Yükleniyor...</div>
 </div>
 
+<script src="{{ url_for('static', filename='script.js') }}"></script>
