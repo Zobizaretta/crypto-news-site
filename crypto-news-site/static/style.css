@@ -163,3 +163,30 @@ h1, h2, h3 {
     }
 }
 
+/* Ortak yapı */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.12;
+    z-index: -1;
+}
+
+/* Anasayfa */
+.index .background-image {
+    background-image: url('/static/images/crypto-background.jpg');
+}
+
+/* Live Charts sayfası */
+.charts .background-image {
+    background-image: url('/static/images/crypto-background2.jpg');
+}
+
+/* Fear & Greed sayfası */
+.feargreed .background-image {
+    background-image: url('/static/images/crypto-background3.jpg');
+}

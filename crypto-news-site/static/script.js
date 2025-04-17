@@ -92,7 +92,7 @@ function fetchNews() {
 
 
 
-setInterval(fetchNews, 5000);
+setInterval(fetchNews, 10000);
 window.onload = fetchNews;
 
 async function updateTicker() {
@@ -125,3 +125,26 @@ async function updateTicker() {
 
 setInterval(updateTicker, 15000);
 window.addEventListener("load", updateTicker);
+
+// script.js
+
+function guncelSaat() {
+    const saatDiv = document.getElementById('turkiye-saat');
+
+    // Türkiye saati için UTC+3 ayarlaması
+    const turkiyeZamani = new Date().toLocaleTimeString('tr-TR', {
+        timeZone: 'Europe/Istanbul',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
+
+    // Saati HTML'deki div'e yazdır
+    saatDiv.textContent = turkiyeZamani;
+}
+
+// Sayfa yüklendiğinde ve her saniye saati güncelle
+document.addEventListener('DOMContentLoaded', () => {
+    guncelSaat(); // İlk çalıştırma
+    setInterval(guncelSaat, 1000); // Her saniye güncelle
+});
